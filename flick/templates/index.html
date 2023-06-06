@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+      
+        .logo {
+            max-width: 100px;
+            margin-right: 20px;
+            height:60px;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            height: 50px;
+            border-bottom: 2px solid white;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-link {
+            margin-right: 10px;
+            text-decoration: none;
+            color: white;
+           
+            font-size: 22px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .content {
+            margin-top: 80px; /* Add margin-top to content to prevent overlap with fixed navbar */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXCIeqG8VwDk1iW84ftSlQQn0AZmvpMVIWcw&usqp=CAU" alt="Logo">
+            <a href="/" class="nav-link">Home</a>
+            <span class="nav-link">|</span>
+            <a href="/series" class="nav-link">Series</a>
+            <span class="nav-link">|</span>
+            <a href="/movies" class="nav-link">Movies</a>
+        </div>
+        <div class="nav-links">
+            <a href="{% url 'signup' %}" class="nav-link">Sign Up</a>
+            <span class="nav-link">|</span>
+            <a href="{% url 'signin' %}" class="nav-link">Sign In</a>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <!-- Your page content goes here -->
+    </div>
+</body>
+</html>
