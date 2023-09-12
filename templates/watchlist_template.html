@@ -1,0 +1,16 @@
+<!-- watchlist_template.html -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Watchlist for {{ watchlist_items.0.profile_name }}</h1>
+  <ul>
+    {% if watchlist_items %}
+      {% for item in watchlist_items %}
+        <li>{{ item.video.title }}</li>
+      {% endfor %}
+    {% else %}
+      <li>No items in the watchlist for this profile.</li>
+    {% endif %}
+  </ul>
+  <a href="{% url 'home' %}">Back to Home</a>
+{% endblock %}

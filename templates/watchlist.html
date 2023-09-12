@@ -1,0 +1,15 @@
+<!-- Display watchlist items -->
+<h2>Watchlist</h2>
+<ul>
+    {% for item in watchlist_items %}
+        <li>{{ item.video.title }}</li>
+    {% endfor %}
+</ul>
+
+<!-- Display favorites -->
+<h2>Favorites</h2>
+<ul>
+    {% for item in favorites_items %}
+        <li>{{ item.video.title }}</li>
+    {% endfor %}
+</ul>

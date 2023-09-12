@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add to Watchlist</title>
+</head>
+<body>
+    <h1>Add "{{ video.title }}" to Watchlist</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <label for="profile_id">Select a Profile:</label>
+        <select id="profile_id" name="profile_id">
+            {% for profile in profiles %}
+                <option value="{{ profile.id }}">{{ profile.name }}</option>
+            {% endfor %}
+        </select>
+
+        <br>
+
+        <input type="submit" value="Add to Watchlist">
+    </form>
+
+    <a href="{% url 'movie_details' video_id=video.id %}">Back to Movie Details</a>
+</body>
+</html>
